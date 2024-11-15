@@ -47,37 +47,6 @@ int main()
 
 
 
-#include <stdio.h>
-int main()
-{
-     int a[3];
-     int i,j,p;
-
-     for(i=0;i<=3;i++)
-     {
-         scanf("%d",&a[i]);
-     }
-     for(j=0;j<=3;j++)
-     {
-         for(i=0;i<=3-j;i++)
-         {
-           if(a[i]<a[i+1])
-                {
-                    p=a[i];
-                    a[i]=a[i+1];
-                    a[i+1]=a[i];
-                }
-         }
-     }
-     for(i=0;i<=3;i++)
-        {
-            printf("%d\n",a[i]);
-        }
-
-     return 0;
-
-}
-
 
 
 
