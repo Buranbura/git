@@ -188,7 +188,7 @@ int main()
 
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main() {
 	double a, b,c;
 
@@ -210,12 +210,7 @@ int main() {
         printf("不及格考生");
 
 	return 0;
-}
-
-
-
-
-
+}*/
 
 
 

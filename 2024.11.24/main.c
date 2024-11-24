@@ -41,7 +41,7 @@ int main()
 
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main()
 {
     int i,x=0,j=1;
@@ -64,7 +64,61 @@ int main()
         j++;
     }
     return 0;
+}*/
+
+
+
+/*#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int i;
+    double a,v,sum;
+    sum=0;
+
+    for(i=1;i<=64;i++)
+    {
+        a=pow(2,i-1);
+        sum=sum+a;
+    }
+
+    v=sum/(1.42*pow(10,8));
+    printf("他将得到%lf立方米的麦子\n",v);
+    return 0;
+}*/
+
+
+
+
+#include <stdio.h>
+int main()
+{
+    int a,n,i,j;
+    double s=0;
+
+    printf("请输入a的值和计算几个数相加");
+    scanf("%d %d",&a,&n);
+    j=a;
+    for(i=1;i<=n;i++)
+    {
+        if(i==1)
+            a=a;
+        else
+            a=a*10+j;
+        s=s+a;
+    }
+    printf("%lf",s);
+
+    return 0;
 }
+
+
+
+
+
+
+
+
 
 
 
