@@ -90,7 +90,7 @@ int main()
 
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main()
 {
     int a,n,i,j;
@@ -110,7 +110,39 @@ int main()
     printf("%lf",s);
 
     return 0;
-}
+}*/
+
+
+
+
+/*#include <stdio.h>
+int main()
+{
+    int t,n;
+    float m=0;
+    printf("请输入点歌时间：");
+    scanf("%d",&t);
+    n=t/360;
+    t=t%360;
+
+    if(t<=10)
+        m=1.5*t+n*(1.5*10+350*1);
+    else if(t>10 && t<=120)
+        m=1.5*10+(t-10)*1+n*(1.5*10+350*1);
+
+    printf("点歌结束后的付费金额为：%f",m);
+    return 0;
+}*/
+
+
+
+
+
+
+
+
+
+
 
 
 
