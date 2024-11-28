@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main()
 {
@@ -26,4 +26,42 @@ int main()
     }
 
     return 0;
+}*/
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int male,female,kid;
+    int sum=100;
+    for(male=0;male<=100;male++)
+    {
+        for(female=0;female<=100;female++)
+        {
+            for(kid=0;kid<=100;kid++)
+            {
+                if(male*3+female*2+kid/3.0==sum)
+                {
+                    printf("公鸡有%d只，母鸡有%d只，小鸡有%d只\n",male,female,kid);
+                }
+            }
+        }
+    }
+
+    return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
