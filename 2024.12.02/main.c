@@ -46,7 +46,7 @@ float fun1(float x,float y,float z)
 
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int fun2(float x)
 {
@@ -80,7 +80,69 @@ int main()
     printf("平均成绩为：%f\n",ave);
 
     return 0;
+}*/
+
+
+
+
+
+/*#include <stdio.h>
+
+int fun(float x, float a, float b, float c)
+{
+    int z;
+    z = a*x*x + b*x + c;
+    return z;
 }
+
+int main()
+{
+    int k, m, n, p;
+    int y;
+
+    printf("请依次输入k,m,n,p的值：");
+    scanf("%d %d %d %d",&k, &m, &n, &p);
+
+    y=fun(k, m, n, p);
+    printf("%d",y);
+
+    return 0;
+}*/
+
+
+
+
+
+#include <stdio.h>
+
+int prn_pict (int m, int n)
+{
+    int i,j;
+    char c='A';
+    for(i=1; i<=m; i++,c++)
+    {
+        for(j=1; j<=n; j++)
+        {
+            printf("%c",c);
+        }
+        printf("\n");
+    }
+}
+
+int main()
+{
+    int p,q;
+
+    printf("请输入行数p和列数q:");
+    scanf("%d %d",&p, &q);
+    prn_pict(p, q);
+
+    return 0;
+
+}
+
+
+
 
 
 
