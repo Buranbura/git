@@ -32,7 +32,7 @@ int main()
 
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main()
 {
@@ -53,7 +53,69 @@ int main()
     }
 
     return 0;
-}
+}*/
+
+
+
+
+/*#include <stdio.h>
+
+int main()
+{
+    int x,y;
+    int found=0;
+
+    for(x=-10;x<=10;x++)
+    {
+        for(y=-10;y<=10;y++)
+        {
+            if(5*x*x+7*y*y==23)
+            {
+                found=1;
+                break;
+            }
+
+        }
+        if(found)
+        {
+            break;
+        }
+    }
+    if(found)
+    {
+        printf("方程有整数解，x=%d,y=%d\n",x,y);
+    }
+    else
+    {
+        printf("方程无整数解\n");
+    }
+
+    return 0;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
