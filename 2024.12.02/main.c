@@ -113,7 +113,7 @@ int main()
 
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int prn_pict (int m, int n)
 {
@@ -139,7 +139,50 @@ int main()
 
     return 0;
 
+}*/
+
+
+
+
+/*#include <stdio.h>
+
+int fun(int x,int y)
+{
+    int i, j;
+
+    for(i = x; i >= 1; i--)
+    {
+        if(x % i == 0 && y % i == 0)
+        {
+            printf("最大公约数是：%d",i);
+            break;
+        }
+    }
+    for(j = x; j <= x*y; j++)
+    {
+        if(j % x == 0 && j % y == 0)
+        {
+            printf("最小公倍数是：%d",j);
+            break;
+        }
+    }
+
 }
+
+int main()
+{
+    int p,q;
+
+    printf("请输入两个整数：");
+    scanf("%d %d", &p, &q);
+    fun(p, q);
+
+    return 0;
+}*/
+
+
+
+
 
 
 
