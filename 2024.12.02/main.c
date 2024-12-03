@@ -107,8 +107,8 @@ int main()
     printf("%d",y);
 
     return 0;
-}*/
-
+}
+*/
 
 
 
@@ -146,26 +146,23 @@ int main()
 
 /*#include <stdio.h>
 
-int fun(int x,int y)
+void fun(int x,int y)
 {
-    int i, j;
+    int i;
+    int max,min;
 
-    for(i = x; i >= 1; i--)
+    min = (x < y) ? x : y;
+    for(i = min; i >= 1; i--)
     {
         if(x % i == 0 && y % i == 0)
         {
-            printf("最大公约数是：%d",i);
+            printf("最大公约数是：%d\n",i);
             break;
         }
     }
-    for(j = x; j <= x*y; j++)
-    {
-        if(j % x == 0 && j % y == 0)
-        {
-            printf("最小公倍数是：%d",j);
-            break;
-        }
-    }
+    int j;
+    j = (x * y)/i;
+    printf("最小公倍数是：%d\n",j);
 
 }
 
