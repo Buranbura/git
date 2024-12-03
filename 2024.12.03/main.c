@@ -196,7 +196,7 @@ int main() {
 
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <ctype.h>
 
 #define MAX_EXPR_LENGTH 100
@@ -283,15 +283,101 @@ int checkOperands(const char *expr, int start, int *end) {
     }
     *end = i;
     return 1;
+}*/
+
+
+
+
+
+#include <stdio.h>
+
+// 函数声明
+int isLeapYear(int year);
+int getDaysInMonth(int year, int month);
+int calculateDays(int year, int month, int day);
+int calculateAge(int birthYear, int birthMonth, int birthDay, int currentYear, int currentMonth, int currentDay);
+int calculateDaysToNextBirthday(int birthYear, int birthMonth, int birthDay, int currentYear, int currentMonth, int currentDay);
+
+int main() {
+    int birthYear, birthMonth, birthDay;
+    int currentYear, currentMonth, currentDay;
+    int age, daysToNextBirthday;
+
+    // 获取用户的出生年月日
+    printf("请输入您的出生年月日（格式：YYYY MM DD）：");
+    scanf("%d %d %d", &birthYear, &birthMonth, &birthDay);
+
+    // 获取当前日期
+    printf("请输入当前日期（格式：YYYY MM DD）：");
+    scanf("%d %d %d", &currentYear, &currentMonth, &currentDay);
+
+    // 计算年龄和距离下一次生日的天数
+    age = calculateAge(birthYear, birthMonth, birthDay, currentYear, currentMonth, currentDay);
+    daysToNextBirthday = calculateDaysToNextBirthday(birthYear, birthMonth, birthDay, currentYear, currentMonth, currentDay);
+
+    // 输出结果
+    printf("您的周岁年龄是：%d\n", age);
+    printf("您距离下一次生日还有：%d 天\n", daysToNextBirthday);
+
+    return 0;
 }
 
+// 判断是否为闰年
+int isLeapYear(int year) {
+    return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+}
 
+// 获取月份的天数
+int getDaysInMonth(int year, int month) {
+    switch (month) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            return 31;
+        case 4: case 6: case 9: case 11:
+            return 30;
+        case 2:
+            return isLeapYear(year) ? 29 : 28;
+        default:
+            return 0;
+    }
+}
 
+// 计算从年初到指定日期的天数
+int calculateDays(int year, int month, int day) {
+    int days = 0;
+    for (int i = 1; i < month; ++i) {
+        days += getDaysInMonth(year, i);
+    }
+    days += day;
+    return days;
+}
 
+// 计算周岁年龄
+int calculateAge(int birthYear, int birthMonth, int birthDay, int currentYear, int currentMonth, int currentDay) {
+    int age = currentYear - birthYear;
+    if (currentMonth < birthMonth || (currentMonth == birthMonth && currentDay < birthDay)) {
+        age--;
+    }
+    return age;
+}
 
+// 计算距离下一次生日的天数
+int calculateDaysToNextBirthday(int birthYear, int birthMonth, int birthDay, int currentYear, int currentMonth, int currentDay) {
+    int currentDays = calculateDays(currentYear, currentMonth, currentDay);
+    int nextBirthdayDays = calculateDays(currentYear, birthMonth, birthDay);
 
+    if (currentMonth > birthMonth || (currentMonth == birthMonth && currentDay >= birthDay)) {
+        // 如果今年的生日已经过了，计算到明年生日的天数
+        nextBirthdayDays = calculateDays(currentYear + 1, birthMonth, birthDay);
+    }
 
-
+    // 计算距离下一次生日的天数
+    int daysToNextBirthday = nextBirthdayDays - currentDays;
+    if (daysToNextBirthday < 0) {
+        // 如果计算结果为负数，说明今年的生日还没到，需要加上今年剩余的天数
+        daysToNextBirthday += 365 + isLeapYear(currentYear);
+    }
+    return daysToNextBirthday;
+}
 
 
 
