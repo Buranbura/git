@@ -289,7 +289,7 @@ int checkOperands(const char *expr, int start, int *end) {
 
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 // º¯ÊýÉùÃ÷
 int isLeapYear(int year);
@@ -377,7 +377,31 @@ int calculateDaysToNextBirthday(int birthYear, int birthMonth, int birthDay, int
         daysToNextBirthday += 365 + isLeapYear(currentYear);
     }
     return daysToNextBirthday;
-}
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

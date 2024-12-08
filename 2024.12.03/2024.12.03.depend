@@ -1,8 +1,9 @@
 # depslib dependency file v1.0
-1733215149 source:d:\code project\2024.12.03\main.c
+1733216585 source:d:\code project\2024.12.03\main.c
 	<stdlib.h>
 	<stdlib.h>
 	<ctype.h>
 	<ctype.h>
 	<stdio.h>
+	<stdlib.h>
 
