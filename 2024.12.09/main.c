@@ -30,7 +30,7 @@ int main()
 
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 
 void fun2(float a[][5], int N)
@@ -69,4 +69,45 @@ int main()
     }
 
     return 0;
+}*/
+
+
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#define N 3
+int main()
+{
+    int a[N][N] = {1,2,3,4,5,6,7,8,9};
+    int i, s1 = 0, s2 = 0;
+    for(i = 0; i< N; i++)
+    {
+        s1 = s1 + a[i][i];
+        s2 = s2 + a[i][2 - i];
+    }
+    printf("3*3矩阵的对角线元素之和为:%d\n", s1 + s2);
+
+    return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
