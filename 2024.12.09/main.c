@@ -75,8 +75,7 @@ int main()
 
 
 
-
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 #define N 3
 int main()
@@ -92,12 +91,56 @@ int main()
 
     return 0;
 }
+*/
 
 
 
 
+#include <stdio.h>
+#define N 15
 
+int fun(int *p, int target)
+{
+    int left = 0;
+    int right = N - 1;
+    int mid;
+    while(left <= right)
+    {
+        mid = left + (right - left) / 2;
+        if(p[mid] == target)
+        {
+            return mid;
+        }
+        else if(p[mid] > target)
+        {
+            right = mid - 1;
+        }
+        else
+        {
+            left = mid + 1;
+        }
+    }
+    return NULL;
+}
 
+int main()
+{
+    int a[N] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+    int target;
+    int *result;
+    printf("输入你想要查询的数:");
+    scanf("%d", &target);
+    result = fun(a, target);
+    if(result != NULL)
+    {
+        printf("数字%d的地址为: %d\n", target, result);
+    }
+    else
+    {
+        printf("数字%d在该数组中未找到\n", target);
+    }
+    return 0;
+}
 
 
 
