@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1734091711 source:d:\code project\2024.12.13\main.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
