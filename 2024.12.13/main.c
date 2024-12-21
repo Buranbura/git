@@ -17,7 +17,7 @@ int main()
 
 
 
-/*#include <stdio.h>
+#include <stdio.h>
 #include <string.h>
 
 #define STUDENT_COUNT 6
@@ -116,13 +116,13 @@ void printTopFive(const Student students[], int count) {
     for (int i = 0; i < 5; i++) {
         printf("%s\t|%.2f\n", students[i].name, students[i].average);
     }
-}*/
+}
 
 
 
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <string.h>
 
 #define WORKER_COUNT 4
@@ -179,7 +179,7 @@ int main()
 
     return 0;
 
-}
+}*/
 
 
 
