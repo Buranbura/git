@@ -45,7 +45,7 @@ int main()
 
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <math.h>
 
 int fun(int a)
@@ -77,8 +77,7 @@ int main()
     else
         printf("数字%d不是素数", A);
     return 0;
-}
-
+}*/
 
 
 
