@@ -49,7 +49,7 @@ void josephus(Node *head, int initia1M)
     Node *current = head, *prev = NULL;
     int m = initia1M;
 
-    //找尾节点（prev初始化为尾节点）
+    //找尾节点（将prev初始化为尾节点）
     while(prev == NULL || prev ->next != head)
     {
         prev = (prev == NULL) ? head : prev ->next;
